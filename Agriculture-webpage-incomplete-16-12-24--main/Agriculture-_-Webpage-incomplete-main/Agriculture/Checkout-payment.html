@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+
+
+        /* Navbar-style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10; /* Ensure navbar is always on top */
+            /* background-color: rgba(255,255,255,0.5); */
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwriting', cursive;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a{
+            font-size: 130%;
+            font-family: "Playwrite PT Guides", cursive;
+        }
+    
+        .navbar-brand img{
+            height: 50px;
+            width: 150%;
+        }
+        /**/
+        
+        body {
+            background-size:cover;
+            margin-top: 90px;
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .checkout-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            /* background-color: white; */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+            /* background-color: #343a40; */
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .payment-options .form-check-label {
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .order-summary {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .order-summary h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .order-summary .list-group-item {
+            padding: 10px;
+        }
+
+        .order-summary .total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .btn-confirm {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-confirm:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/B04Gfy1teiz3sdqe6/videoblocks-online-payment-from-smartphone-online-shopping-business-mobile-shopping-online-payment-with-credit-card-animation-at-the-screen-mobile-phone_st7cuoop8__e4cf78a672ac064d942af43a6b26a76b__P360.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light  rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" title="AgriMart"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product-Categories.html" title="Product-Categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Details.html" title="Details">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html" title="About-Us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html" title="Contact-Us">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html" title="Blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html" title="FAQ">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="border-radius: 20px; background-color: #DFFF00; color: red;" href="Checkout-payment.html" title="Checkout-payment">Checkout-payment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- main -->
+<div class="container checkout-container">
+
+    <h2 class="checkout-header">Checkout Process</h2>
+    
+    <div class="row">
+        <!-- Order Summary -->
+        <div class="col-md-6 order-summary">
+            <h4>Order Summary</h4>
+            <ul class="list-group" id="orderSummaryList">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p class="total" id="orderTotal">Total: ₹0</p>
+        </div>
+
+        <!-- Billing Information -->
+        <div class="col-md-6">
+            <h4 class="section-title">Billing Information</h4>
+            <form id="checkoutForm">
+                <!-- Billing Form Fields -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <!-- More form fields... -->
+                <button type="submit" class="btn btn-primary btn-block mt-4">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+
+        <!-- Billing Information -->
+        <div class="col-md-6">
+            <h4 class="section-title">Billing Information</h4>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your shipping address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                
+                <h4 class="section-title mt-4">Payment Options</h4>
+                <div class="payment-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="creditCard" checked>
+                        <label class="form-check-label" for="creditCard">
+                            Credit Card (Visa, MasterCard, etc.)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                        <label class="form-check-label" for="paypal">
+                            PayPal
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="upi" value="upi">
+                        <label class="form-check-label" for="upi">
+                            UPI (Unified Payments Interface)
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block mt-4">Place Order</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Confirmation -->
+    <div id="orderConfirmation" class="mt-5" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Order Placed Successfully!</h4>
+            <p>Your order has been confirmed. You will receive an email confirmation shortly with the details of your purchase.</p>
+            <hr>
+            <p class="mb-0">Thank you for shopping with us!</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<!-- JavaScript for Order Confirmation -->
+<script>
+
+    window.onload = function() {
+            // Fetch cart data from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderSummaryList = document.getElementById('orderSummaryList');
+            let totalAmount = 0;
+
+            // Check if there are items in the cart
+            if (cart.length > 0) {
+                cart.forEach(function(item) {
+                    // Create list items for each product in the cart
+                    const li = document.createElement('li');
+                    li.classList.add('list-group-item');
+                    li.innerHTML = `<strong>${item.name}</strong> - ₹${item.price}`;
+                    orderSummaryList.appendChild(li);
+                    
+                    // Add to the total amount
+                    totalAmount += item.price;
+                });
+
+                // Update the total amount
+                document.getElementById('orderTotal').innerText = `Total: ₹${totalAmount}`;
+            } else {
+                // If cart is empty, show a message
+                orderSummaryList.innerHTML = '<li class="list-group-item">No items in cart</li>';
+                document.getElementById('orderTotal').innerText = 'Total: ₹0';
+            }
+        };
+
+        document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Display order confirmation
+            document.getElementById("orderConfirmation").style.display = "block";
+        });
+</script>
+</body>
+</html>
