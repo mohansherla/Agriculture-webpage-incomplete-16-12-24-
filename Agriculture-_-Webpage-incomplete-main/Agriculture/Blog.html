@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+         body {
+            background-image: url('https://annaandsarah.com/cdn/shop/articles/DALL_E_2024-07-11_15.28.01_-_A_beautifully_arranged_display_of_Anna_and_Sarah_s_Premium_Mixed_Nuts_in_Shell._The_background_is_warm_and_inviting_with_soft_natural_lighting._The_nu.webp?v=1720700898');
+            background-size: cover;
+            margin-top: 90px;
+        }
+
+        /* Navbar-style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10; /* Ensure navbar is always on top */
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwriting', cursive;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a{
+            font-size: 130%;
+            font-family: "Playwrite PT Guides", cursive;;
+
+        }
+
+        .navbar-brand img{
+            height: 50px;
+            width: 150%;
+        }
+        /**/
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .blog-header {
+            /* background-color: #007bff; */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+        }
+
+        .blog-post {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .blog-post .post-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .blog-post .post-meta {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .btn-read-more {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .btn-read-more:hover {
+            background-color: #218838;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        /**/
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="font-family:'Lucida Handwriting', cursive;"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product-Categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Blog Header -->
+<div class="blog-header">
+    <h1>Farm Blog</h1>
+    <p>Your source for agricultural tips, product reviews, and farming advice.</p>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+
+        <!-- First Article -->
+        <div class="col-md-4">
+            <div class="blog-post">
+                <img src="https://via.placeholder.com/350x200" alt="Agricultural Tips">
+                <div class="post-content">
+                    <h2 class="post-title">Top 5 Agricultural Tips for Beginners</h2>
+                    <p class="post-meta">By John Doe | December 12, 2024</p>
+                    <p>Starting your own farm can be overwhelming, but with the right tips, you can get off to a great start. Here are five essential tips to keep in mind...</p>
+                    <button class="btn-read-more" onclick="showFullPost('post1')">Read More</button>
+                    <div id="post1" class="post-full-content" style="display: none;">
+                        <p>When starting a farm, planning and research are key. It's important to understand the climate of your region, choose the right crops, and invest in the right tools...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Article -->
+        <div class="col-md-4">
+            <div class="blog-post">
+                <img src="https://via.placeholder.com/350x200" alt="Product Review">
+                <div class="post-content">
+                    <h2 class="post-title">Review of the Best Farming Tools for 2024</h2>
+                    <p class="post-meta">By Jane Smith | December 10, 2024</p>
+                    <p>With farming technology advancing rapidly, it's essential to use the right tools to improve productivity. In this article, we review some of the best farming tools...</p>
+                    <button class="btn-read-more" onclick="showFullPost('post2')">Read More</button>
+                    <div id="post2" class="post-full-content" style="display: none;">
+                        <p>From tractors to irrigation systems, the right tools can make all the difference. After testing a range of products, we recommend the following tools based on ease of use and efficiency...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Article -->
+        <div class="col-md-4">
+            <div class="blog-post">
+                <img src="https://via.placeholder.com/350x200" alt="Farming Advice">
+                <div class="post-content">
+                    <h2 class="post-title">Farming Advice: How to Improve Soil Health</h2>
+                    <p class="post-meta">By Michael Brown | December 8, 2024</p>
+                    <p>Soil health is critical for the success of any farm. Here’s some advice on improving your soil quality to boost crop yields and sustainability...</p>
+                    <button class="btn-read-more" onclick="showFullPost('post3')">Read More</button>
+                    <div id="post3" class="post-full-content" style="display: none;">
+                        <p>To improve soil health, it’s essential to understand the components of soil, including its organic matter and nutrient content. Regular testing, composting, and crop rotation are key...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+    function showFullPost(postId) {
+            const postContent = document.getElementById(postId);
+            if (postContent.style.display === "none") {
+                postContent.style.display = "block";
+            } else {
+                postContent.style.display = "none";
+            }
+        }
+</script>
+</body>
+</html>

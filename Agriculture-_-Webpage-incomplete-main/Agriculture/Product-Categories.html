@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://annaandsarah.com/cdn/shop/articles/DALL_E_2024-07-11_15.28.01_-_A_beautifully_arranged_display_of_Anna_and_Sarah_s_Premium_Mixed_Nuts_in_Shell._The_background_is_warm_and_inviting_with_soft_natural_lighting._The_nu.webp?v=1720700898');
+            background-size: cover;
+            margin-top: 90px;
+        }
+
+        h2 a{
+            text-decoration: none;
+        }
+
+        h2 a:hover{
+            text-decoration: underline;
+        }
+
+        h2{
+            font-family: cursive;
+        }
+
+        .category-card {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .category-description {
+            font-size: 1rem;
+        }
+
+        .category-container {
+            margin-top: 50px;
+        }
+
+
+        /* navbar  */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10; /* Ensure navbar is always on top */
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwriting', cursive;
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a{
+            font-size: 130%;
+            font-family: "Playwrite PT Guides", cursive;;
+
+        }
+
+        .navbar-brand img{
+            height: 50px;
+            width: 150%;
+        }
+ 
+    </style>
+</head>
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="font-family:'Lucida Handwriting', cursive;"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Product-Categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- Product Categories -->
+        <h2 class="text-center my-5 mx-2">Product Categories</h2>
+        <!-- Product Categories Section -->
+        <section class="container category-container">
+            <h2 class="text-center my-5"><a href="#seedsslide">Seeds</a></h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Category 1: Seeds1 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://odishaseedsportal.nic.in/assets/images/slider-1.jpg" class="card-img-top" alt="Seeds" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Seeds1</h5>
+                            <p class="card-text category-description">Explore a wide variety of high-quality seeds for your farm.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2: seeds2 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/388901105/JK/XS/FH/212374456/maize-seed-500x500.jpg" class="card-img-top" alt="Fertilizers">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Seeds2</h5>
+                            <p class="card-text category-description">Premium fertilizers for enhanced plant growth and yield.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 3: seeds3 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2021/3/FV/KY/UH/14374876/coriander-seeds-250x250.jpg" class="card-img-top" alt="Equipment" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Seeds3</h5>
+                            <p class="card-text category-description">Discover farming tools and equipment to improve productivity.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center my-5"><a href="#">Fertilizers</a></h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Category 1: Fertilizers1 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/JQ/JT/OG/1393371/indiamart-grosur-npk-06-24-36--500x500.png" class="card-img-top" alt="Seeds">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Fertilizers1</h5>
+                            <p class="card-text category-description">Explore a wide variety of high-quality seeds for your farm.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2: Fertilizers2 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/6/316648925/EX/IH/NP/21075677/gromor-fertilizer-500x500.webp" class="card-img-top" alt="Fertilizers">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Fertilizers2</h5>
+                            <p class="card-text category-description">Premium fertilizers for enhanced plant growth and yield.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 3: Fertilizers3 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/2/CG/HV/AT/59477832/npk0050-potassium-sulphate-water-soluable-fetilizer-500x500.jpg" class="card-img-top" alt="Equipment">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Fertilizers3</h5>
+                            <p class="card-text category-description">Discover farming tools and equipment to improve productivity.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center my-5"><a href="#">Equipment</a></h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Category 1: Equipment1 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/India_Farming.jpg" class="card-img-top" alt="Seeds">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Equipment1</h5>
+                            <p class="card-text category-description">Explore a wide variety of high-quality seeds for your farm.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2: Equipment2 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNAOs0akMXPH2BS0jsju4qrZ3MrKvobPuTG8Z7CFkLDWK4P7iVXQQp3jSMkdHX9BRcn3A&usqp=CAU" class="card-img-top" alt="Fertilizers">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Equipment2</h5>
+                            <p class="card-text category-description">Premium fertilizers for enhanced plant growth and yield.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 3: Equipment3-->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://c8.alamy.com/comp/ET1T48/farmer-machine-ploughing-sindhudurg-konkan-maharashtra-india-asia-ET1T48.jpg" class="card-img-top" alt="Equipment">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Equipment3</h5>
+                            <p class="card-text category-description">Discover farming tools and equipment to improve productivity.</p>
+                            <div class="product-btn-container">
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', -1)">-</button>
+                                <span id="quantity-Seeds1" class="product-quantity">0</span>
+                                <button class="btn btn-secondary btn-container" onclick="adjustQuantity('Seeds1', 1)">+</button>
+                                <button class="btn btn-success" onclick="addToCard('Seeds1')">Add to Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        function adjustQuantity(product, change) {
+            const currentQuantity = parseInt(localStorage.getItem(product) || 0);
+            const newQuantity = currentQuantity + change;
+
+            // Ensure that the quantity doesn't go below 0
+            if (newQuantity >= 0) {
+                localStorage.setItem(product, newQuantity);
+                document.getElementById('quantity-' + product).innerText = newQuantity;
+            }
+        }
+
+        // Function to add product to cart
+        function addToCard(product) {
+            alert(product + " has been added to your cart!");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body{
+            background-size: cover;
+            margin-top: 150px;
+        }
+        /* Navbar-style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwritting', cursive;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a{
+            font-size: 130%;
+            font-family: "Playwrite PT Guides", cursive;;
+
+        }
+
+        .navbar-brand img{
+            height: 50px;
+            width: 150%;
+        }
+
+        /*Product cards*/
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .review-select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .card-body button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+        .card-body button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="font-family:'Lucida Handwriting', cursive;"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product-Categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Organic Wheat">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Wheat</h5>
+                        <p class="card-text">Freshly harvested organic wheat grown with natural methods. Ideal for making flour, snacks, and more.</p>
+                        <div class="price">₹450</div>
+                        <select class="review-select">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button onclick="addToCart('Organic Wheat')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Organic Rice">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Rice</h5>
+                        <p class="card-text">High-quality organic rice perfect for your everyday meals. Cultivated without harmful pesticides.</p>
+                        <div class="price">₹450</div>
+                        <select class="review-select">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button onclick="addToCart('Organic Rice')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Fresh Organic Vegetables">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Organic Vegetables</h5>
+                        <p class="card-text">Enjoy fresh, organic vegetables sourced from sustainable farms. Perfect for your health-conscious meals.</p>
+                        <div class="price">₹450</div>
+                        <select class="review-select">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button onclick="addToCart('Fresh Organic Vegetables')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Organic Potatoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Potatoes</h5>
+                        <p class="card-text">Farm-fresh organic potatoes, harvested with care. Ideal for baking, boiling, and frying.</p>
+                        <div class="price">₹450</div>
+                        <select class="review-select">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button onclick="addToCart('Organic Potatoes')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Organic Green Beans">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Green Beans</h5>
+                        <p class="card-text">Healthy, organic green beans, packed with vitamins and perfect for a variety of dishes.</p>
+                        <div class="price">₹450</div>
+                        <select class="review-select">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button onclick="addToCart('Organic Green Beans')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Organic Green Beans">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Green Beans</h5>
+                        <p class="card-text">Healthy, organic green beans, packed with vitamins and perfect for a variety of dishes.</p>
+                        <div class="price">₹450</div>
+                        <select class="review-select">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button onclick="addToCart('Organic Green Beans')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to handle "Add to Cart" button click
+        function addToCart(product) {
+            alert(product + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>

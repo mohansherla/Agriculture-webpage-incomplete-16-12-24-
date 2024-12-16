@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Navbar-style */
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Times New Roman", serif;
+            font-size: 18px;
+        }
+        /**/
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .checkout-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .payment-options .form-check-label {
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .order-summary {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .order-summary h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .order-summary .list-group-item {
+            padding: 10px;
+        }
+
+        .order-summary .total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .btn-confirm {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-confirm:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        
+        /**/
+        /* Footer  */
+        .footer {
+            /* background-color: #dc7633; */
+            background: linear-gradient(110.1deg, rgb(34, 126, 34) 2.9%, rgb(168, 251, 60) 90.3%);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            margin: 0 15px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="font-family:'Lucida Handwriting', cursive;">AgriMart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product-Categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Checkout-payment.html">Checkout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- main -->
+<div class="container checkout-container">
+    <h2 class="checkout-header">Checkout Process</h2>
+    
+    <div class="row">
+        <!-- Order Summary -->
+        <div class="col-md-6 order-summary">
+            <h4>Order Summary</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Item 1:</strong> Agricultural Seeds - ₹450
+                </li>
+                <li class="list-group-item">
+                    <strong>Item 2:</strong> Organic Fertilizer - ₹250
+                </li>
+                <li class="list-group-item">
+                    <strong>Item 3:</strong> Farming Tools Set - ₹1200
+                </li>
+                <li class="list-group-item">
+                    <strong>Shipping:</strong> ₹50
+                </li>
+            </ul>
+            <p class="total">Total: ₹1950</p>
+        </div>
+
+        <!-- Billing Information -->
+        <div class="col-md-6">
+            <h4 class="section-title">Billing Information</h4>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your shipping address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                
+                <h4 class="section-title mt-4">Payment Options</h4>
+                <div class="payment-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="creditCard" checked>
+                        <label class="form-check-label" for="creditCard">
+                            Credit Card (Visa, MasterCard, etc.)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                        <label class="form-check-label" for="paypal">
+                            PayPal
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="upi" value="upi">
+                        <label class="form-check-label" for="upi">
+                            UPI (Unified Payments Interface)
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block mt-4">Place Order</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Confirmation -->
+    <div id="orderConfirmation" class="mt-5" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Order Placed Successfully!</h4>
+            <p>Your order has been confirmed. You will receive an email confirmation shortly with the details of your purchase.</p>
+            <hr>
+            <p class="mb-0">Thank you for shopping with us!</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div>
+        <a href="Product-Categories.html">Product Categories</a>
+        <a href="#">Product Detail Screen</a>
+        <a href="#">About Us Screen</a>
+    </div>
+    <p>&copy; 2024 AgriMart | All Rights Reserved</p>
+</footer>
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<!-- JavaScript for Order Confirmation -->
+<script>
+    document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        // Display order confirmation
+        document.getElementById("orderConfirmation").style.display = "block";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://annaandsarah.com/cdn/shop/articles/DALL_E_2024-07-11_15.28.01_-_A_beautifully_arranged_display_of_Anna_and_Sarah_s_Premium_Mixed_Nuts_in_Shell._The_background_is_warm_and_inviting_with_soft_natural_lighting._The_nu.webp?v=1720700898');
+            background-size: cover;
+            margin-top: 90px;
+        }
+
+        h2 a{
+            text-decoration: none;
+        }
+
+        h2 a:hover{
+            text-decoration: underline;
+        }
+
+        h2{
+            font-family: cursive;
+        }
+
+        .category-card {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .category-description {
+            font-size: 1rem;
+        }
+
+        .category-container {
+            margin-top: 50px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwriting', cursive;
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-link {
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a {
+            font-size: 130%;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: 150%;
+        }
+
+        /* New styling for the 'Buy Now' button and added cart state */
+        .added-to-cart {
+            background-color: #28a745;
+            color: white;
+            cursor: not-allowed;
+        }
+
+        .buy-now-btn {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Product-Categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Details.html">Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About-Us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact-us.html">Contact-Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- Product Categories -->
+        <h2 class="text-center my-5 mx-2">Product Categories</h2>
+        <section class="container category-container">
+            <h2 class="text-center my-5"><a href="#seedsslide">Seeds</a></h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Category 1: Seeds1 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://odishaseedsportal.nic.in/assets/images/slider-1.jpg" class="card-img-top" alt="Seeds" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Seeds1</h5>
+                            <p class="card-text category-description">Explore a wide variety of high-quality seeds for your farm.</p>
+                            <div class="buy-now-btn">
+                                <button id="buy-now-Seeds1" class="btn btn-success" onclick="addToCart('Seeds1')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Seeds2 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/388901105/JK/XS/FH/212374456/maize-seed-500x500.jpg" class="card-img-top" alt="Seeds2">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Seeds2</h5>
+                            <p class="card-text category-description">Explore premium fertilizers for plant growth and yield.</p>
+                            <div class="buy-now-btn">
+                                <button id="buy-now-Seeds2" class="btn btn-success" onclick="addToCart('Seeds2')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Seeds3 -->
+                <div class="col">
+                    <div class="card category-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2021/3/FV/KY/UH/14374876/coriander-seeds-250x250.jpg" class="card-img-top" alt="Seeds3" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title category-title">Seeds3</h5>
+                            <p class="card-text category-description">Explore high-quality equipment to improve farm productivity.</p>
+                            <div class="buy-now-btn">
+                                <button id="buy-now-Seeds3" class="btn btn-success" onclick="addToCart('Seeds3')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to handle adding to cart and changing button text
+        function addToCart(product) {
+            alert(product + " has been added to your cart!");
+
+            // Change the "Buy Now" button text to "Added to Cart" and disable it
+            var button = document.getElementById('buy-now-' + product);
+            button.textContent = "Added to Cart";
+            button.classList.add('added-to-cart');
+            button.setAttribute('disabled', 'true');
+
+            // Optionally, you can redirect to the checkout page
+            // window.location.href = "checkout.html"; // Uncomment this line to redirect to the checkout page
+        }
+    </script>
+</body>
+</html>
