@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>Agriculture Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awasm  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        body{
+            background-size: cover;
+            margin-top: 150px;
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        /* Navbar-style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: 	#E6E6FA;
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwritting', cursive;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a{
+            font-size: 130%;
+            font-family: "Playwrite PT Guides", cursive;
+        }
+
+        .navbar-brand img{
+            height: 50px;
+            width: 150%;
+        }
+
+        /*Product cards*/
+
+        /* .container{
+            margin-top: 600px;
+        } */
+
+        h1{
+            font-family: cursive;
+            color: #DFFF00;
+            /* margin-top: 100px; */
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            height: 200px;
+            width: 100%;
+            /* object-fit: cover; */
+        }
+        .price {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        .card-body button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+
+        .card-body button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="https://videos.pexels.com/video-files/10041394/10041394-sd_640_360_24fps.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="font-family:'Lucida Handwriting', cursive;"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product-Categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="border-radius: 20px; background-color: #DFFF00; color: red;" href="Details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Checkout-payment.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <!-- <img src="https://img.icons8.com/?size=100&id=2943&format=png&color=000000" width="30px"> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <header class="header">Details</header> -->
+
+    <h1 class="text-center my-5">Details</h1>
+    <div class="container my-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://2.wlimg.com/product_images/bc-full/2024/8/13592383/organic-wheat-seeds-1723462022-7562075.jpeg" class="card-img-top" alt="Organic Wheat">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Wheat</h5>
+                        <p class="card-text">Freshly harvested organic wheat grown with natural methods. Ideal for making flour, snacks, and more.</p>
+                        <div class="price">₹90</div>
+                        <!-- Add to Cart Button in Details.html -->
+                        <button class="btn btn-success" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://veganfamilykitchen.com/wp-content/uploads/2019/04/how-to-cook-brown-rice-easiest-simplest-healthiest-way-featureimage-1.jpg" class="card-img-top" alt="Organic Rice">
+                    <div class="card-body">
+                        <h5 class="card-title">Brown Rice</h5>
+                        <p class="card-text">High-quality organic rice perfect for your everyday meals. Cultivated without harmful pesticides.</p>
+                        <div class="price">₹1500</div>
+                        <!-- Add to Cart Button in Details.html -->
+                        <button class="btn btn-success" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://s.abcnews.com/images/GMA/organic-produce-01-sh-iwb-220810_1660138683424_hpMain_16x9_992.jpg" class="card-img-top" alt="Fresh Organic Vegetables">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Organic Vegetables</h5>
+                        <p class="card-text">Enjoy fresh, organic vegetables sourced from sustainable farms. Perfect for your health-conscious meals.</p>
+                        <div class="price">₹500</div>
+                        <!-- Add to Cart Button in Details.html -->
+                        <button class="btn btn-success" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://cdn.mos.cms.futurecdn.net/2Aco4s8mLGwfvD6zS4LQ5j.jpg" class="card-img-top" alt="Organic Potatoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Tomatos</h5>
+                        <p class="card-text">Farm-fresh organic potatoes, harvested with care. Ideal for baking, boiling, and frying.</p>
+                        <div class="price">₹250</div>
+                       
+                        <!-- Add to Cart Button in Details.html -->
+                        <button class="btn btn-success" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://b2099440.smushcdn.com/2099440/wp-content/uploads/506-600x600.jpg?lossy=2&strip=1&webp=1" class="card-img-top" alt="Organic Green Beans">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Green Beans</h5>
+                        <p class="card-text">Healthy, organic green beans, packed with vitamins and perfect for a variety of dishes.</p>
+                        <div class="price">₹150</div>
+                        
+                        <!-- Add to Cart Button in Details.html -->
+                        <button class="btn btn-success" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://im.rediff.com/money/2018/jan/11groundnut.jpg?fr=money" class="card-img-top" alt="Organic Green Beans">
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Green Beans</h5>
+                        <p class="card-text">Healthy, organic green beans, packed with vitamins and perfect for a variety of dishes.</p>
+                        <div class="price">₹500</div>
+                        
+                        <!-- Add to Cart Button in Details.html -->
+                        <button class="btn btn-success" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+    // Adding event listeners to each Add to Cart button
+    document.querySelectorAll('#addToCartBtn').forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const product = {
+                name: card.querySelector('.card-title').textContent,
+                price: card.querySelector('.price').textContent.replace('₹', ''),
+                imageUrl: card.querySelector('.card-img-top').src
+            };
+
+            // Add product to cart (localStorage)
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show alert without redirecting
+            alert('Your ' + product.name + ' is added to the Checkout page');        });
+    });
+</script>
+
+<!-- 'Checkout-payment.html' -->
+
+</body>
+</html>

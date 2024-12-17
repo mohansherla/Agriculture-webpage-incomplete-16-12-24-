@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>Contact-Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awasm  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Navbar-style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10; /* Ensure navbar is always on top */
+            /* background-color: rgba(255,255,255,0.5); */
+            background-color: 	#E6E6FA;;
+        }
+
+        .navbar-brand {
+            font-family: 'Lucida Handwriting', cursive;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .news-card {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-link{
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .nav-item a{
+            font-size: 130%;
+            font-family: "Playwrite PT Guides", cursive;
+        }
+    
+        .navbar-brand img{
+            height: 50px;
+            width: 150%;
+        }
+        /**/
+        body {
+            background-size:cover;
+            margin-top: 90px;
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .checkout-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            /* background-color: white; */
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+            /* background-color: #343a40; */
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .payment-options .form-check-label {
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .order-summary {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .order-summary h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .order-summary .list-group-item {
+            padding: 10px;
+        }
+
+        .order-summary .total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .btn-confirm {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-confirm:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/B04Gfy1teiz3sdqe6/videoblocks-online-payment-from-smartphone-online-shopping-business-mobile-shopping-online-payment-with-credit-card-animation-at-the-screen-mobile-phone_st7cuoop8__e4cf78a672ac064d942af43a6b26a76b__P360.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light  rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" title="AgriMart"><img src="https://agrimart.in//uploads/vendor_logo_image/logo_1.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product-Categories.html" title="Product-Categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Details.html" title="Details">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About-Us.html" title="About-Us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html" title="Contact-Us">Contact-Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html" title="Blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html" title="FAQ">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="border-radius: 20px; background-color: #DFFF00; color: red;" href="Checkout-payment.html" title="Checkout-payment"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main -->
+    <div class="container checkout-container">
+
+        <h2 class="checkout-header">Checkout Process</h2>
+        
+        <div class="row">
+       <!-- Checkout Page HTML (your existing code) -->
+
+    <!-- Order Summary -->
+    <div class="col-md-12 order-summary">
+        <h4>Order Summary</h4>
+        <ul class="list-group" id="orderSummaryList">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p class="total" id="orderTotal">Total: ₹0</p>
+    </div>
+
+    <!-- Product Detail Card (hidden until product is added to the cart)
+    <div class="col-md-6" id="productDetailCard" style="display:none;">
+        <div class="card">
+            <img src="" class="card-img-top" id="productImage" alt="Product Image">
+            <div class="card-body">
+                <h5 class="card-title" id="productName"></h5>
+                <p class="card-text" id="productPrice"></p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Product Detail Card (hidden until product is added to the cart) -->
+<div class="col-md-6" id="productDetailCard" style="display:none;">
+    <div class="card">
+        <img src="" class="card-img-top" id="productImage" alt="Product Image">
+        <div class="card-body">
+            <h5 class="card-title" id="productName"></h5>
+            <p class="card-text" id="productPrice"></p>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+        <!-- Billing Information -->
+        <div class="col-md-12">
+            <h4 class="section-title">Billing Information</h4>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your shipping address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                                
+                <button type="submit" class="btn btn-primary btn-block mt-4">Place Order</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Confirmation -->
+    <div id="orderConfirmation" class="mt-5" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Order Placed Successfully!</h4>
+            <p>Your order has been confirmed. You will receive an email confirmation shortly with the details of your purchase.</p>
+            <hr>
+            <p class="mb-0">Thank you for shopping with us!</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- JavaScript for Order Confirmation -->    
+
+<!-- <script>
+        window.onload = function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderSummaryList = document.getElementById('orderSummaryList');
+            const productDetailCard = document.getElementById('productDetailCard');
+            let totalAmount = 0;
+        
+            // Check if there are items in the cart
+            if (cart.length > 0) {
+                cart.forEach(function(item, index) {
+                    // Set the item quantity (default is 1)
+                    item.quantity = item.quantity || 1;
+        
+                    const li = document.createElement('li');
+                    li.classList.add('list-group-item');
+                    li.innerHTML = `
+                        <strong>${item.name}</strong> - ₹<span class="productAmount" id="productAmount-${index}">${item.price * item.quantity}</span> 
+                        <button class="btn btn-danger btn-sm float-end removeBtn" data-index="${index}">Remove</button>
+                        <button class="btn btn-secondary btn-sm float-end mx-2 plusBtn" data-index="${index}">+</button>
+                        <span class="float-end mx-2" id="productQuantity-${index}" class="quantity">${item.quantity}</span>
+                        <button class="btn btn-secondary btn-sm float-end mx-2 minusBtn" data-index="${index}">-</button>
+                    `;
+                    orderSummaryList.appendChild(li);
+        
+                    totalAmount += parseInt(item.price) * item.quantity;
+        
+                    // Show product details card
+                    document.getElementById('productName').textContent = item.name;
+                    document.getElementById('productPrice').textContent = `₹${item.price}`;
+                    document.getElementById('productImage').src = item.imageUrl;
+        
+                    productDetailCard.style.display = 'block'; // Show product details
+                });
+        
+                // Update the total amount
+                document.getElementById('orderTotal').innerText = `Total: ₹${totalAmount}`;
+            } else {
+                orderSummaryList.innerHTML = '<li class="list-group-item">No items in cart</li>';
+                document.getElementById('orderTotal').innerText = 'Total: ₹0';
+            }
+        
+            // Event listeners for the plus and minus buttons
+            document.querySelectorAll('.plusBtn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    const item = cart[index];
+                    item.quantity++; // Increment quantity
+                    localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+        
+                    // Update the displayed quantity
+                    document.getElementById(`productQuantity-${index}`).textContent = item.quantity;
+        
+                    // Update the product amount displayed
+                    const productAmountElement = document.getElementById(`productAmount-${index}`);
+                    productAmountElement.textContent = item.price * item.quantity;
+        
+                    // Update the total amount
+                    updateTotalAmount();
+                });
+            });
+        
+            document.querySelectorAll('.minusBtn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    const item = cart[index];
+                    if (item.quantity > 1) {
+                        item.quantity--; // Decrement quantity
+                        localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+        
+                        // Update the displayed quantity
+                        document.getElementById(`productQuantity-${index}`).textContent = item.quantity;
+        
+                        // Update the product amount displayed
+                        const productAmountElement = document.getElementById(`productAmount-${index}`);
+                        productAmountElement.textContent = item.price * item.quantity;
+        
+                        // Update the total amount
+                        updateTotalAmount();
+                    }
+                });
+            });
+        
+            // Event listener for Remove button
+            document.querySelectorAll('.removeBtn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    cart.splice(index, 1); // Remove item from cart array
+                    localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+        
+                    // Reload the page to reflect changes
+                    window.location.reload();
+                });
+            });
+        
+            // Function to update the total amount
+            function updateTotalAmount() {
+                totalAmount = 0;
+                cart.forEach(function(item) {
+                    totalAmount += parseInt(item.price) * item.quantity;
+                });
+                document.getElementById('orderTotal').innerText = `Total: ₹${totalAmount}`;
+            }
+        };
+    </script> -->
+
+    <script>
+        window.onload = function() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const orderSummaryList = document.getElementById('orderSummaryList');
+    let totalAmount = 0;
+
+    // Check if there are items in the cart
+    if (cart.length > 0) {
+        cart.forEach(function(item, index) {
+            // Set the item quantity (default is 1)
+            item.quantity = item.quantity || 1;
+
+            const li = document.createElement('li');
+            li.classList.add('list-group-item');
+            li.innerHTML = `
+                <strong>${item.name}</strong> - ₹<span class="productAmount" id="productAmount-${index}">${item.price * item.quantity}</span> 
+                <button class="btn btn-danger btn-sm float-end removeBtn" data-index="${index}">Remove</button>
+                <button class="btn btn-secondary btn-sm float-end mx-2 plusBtn" data-index="${index}">+</button>
+                <span class="float-end mx-2" id="productQuantity-${index}" class="quantity">${item.quantity}</span>
+                <button class="btn btn-secondary btn-sm float-end mx-2 minusBtn" data-index="${index}">-</button>
+            `;
+            orderSummaryList.appendChild(li);
+
+            totalAmount += parseInt(item.price) * item.quantity;
+        });
+
+        // Update the total amount
+        document.getElementById('orderTotal').innerText = `Total: ₹${totalAmount}`;
+    } else {
+        orderSummaryList.innerHTML = '<li class="list-group-item">No items in cart</li>';
+        document.getElementById('orderTotal').innerText = 'Total: ₹0';
+    }
+
+    // Event listeners for the plus and minus buttons
+    document.querySelectorAll('.plusBtn').forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index');
+            const item = cart[index];
+            item.quantity++; // Increment quantity
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+
+            // Update the displayed quantity
+            document.getElementById(`productQuantity-${index}`).textContent = item.quantity;
+
+            // Update the product amount displayed
+            const productAmountElement = document.getElementById(`productAmount-${index}`);
+            productAmountElement.textContent = item.price * item.quantity;
+
+            // Update the total amount
+            updateTotalAmount();
+        });
+    });
+
+    document.querySelectorAll('.minusBtn').forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index');
+            const item = cart[index];
+            if (item.quantity > 1) {
+                item.quantity--; // Decrement quantity
+                localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+
+                // Update the displayed quantity
+                document.getElementById(`productQuantity-${index}`).textContent = item.quantity;
+
+                // Update the product amount displayed
+                const productAmountElement = document.getElementById(`productAmount-${index}`);
+                productAmountElement.textContent = item.price * item.quantity;
+
+                // Update the total amount
+                updateTotalAmount();
+            }
+        });
+    });
+
+    // Event listener for Remove button
+    document.querySelectorAll('.removeBtn').forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index');
+            cart.splice(index, 1); // Remove item from cart array
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+
+            // Reload the page to reflect changes
+            window.location.reload();
+        });
+    });
+
+    // Function to update the total amount
+    function updateTotalAmount() {
+        totalAmount = 0;
+        cart.forEach(function(item) {
+            totalAmount += parseInt(item.price) * item.quantity;
+        });
+        document.getElementById('orderTotal').innerText = `Total: ₹${totalAmount}`;
+    }
+};
+
+    </script>
+</body>
+</html>
